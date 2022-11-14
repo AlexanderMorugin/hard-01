@@ -1,0 +1,1354 @@
+@import "../vendor/normalize.css"
+@import "../vendor/fonts/font.css"
+
+$bg-light: #F4F4F4
+$bg-dark: #333
+$bg-footer-light: #EFEFEF
+$bg-footer-dark: #2F2F2F
+$color-for-light-one: #151515
+$color-for-light-two: #222
+$color-for-dark-one: #fff
+$color-for-dark-two: #E6E6E6
+$color-for-dark-three: #E5E5E5
+
+$lead-bg-img: url("../images/lead.jpg")
+$road-bg-img-one: url("../images/highway-1.jpg")
+$road-bg-img-two: url("../images/highway-2.jpg")
+$road-bg-img-three: url("../images/highway-3.jpg")
+$road-bg-img-map: url("../images/background-map.png")
+$road-bg-slider-left: url("../images/slider-left.svg")
+$road-bg-slider-left-white: url("../images/slider-left-white.svg")
+$road-bg-slider-right: url("../images/slider-right.svg")
+$road-bg-slider-right-white: url("../images/slider-right-white.svg")
+$accordion-bg-img-arrow: url("../images/accordion-arrow.svg")
+$accordion-bg-img-arrow-white: url("../images/accordion-arrow-white.svg")
+$footer-icon-logo: url("../images/footer-icon-logo.svg")
+$footer-icon-logo-white: url("../images/footer-icon-logo-white.svg")
+$toggle-bg-img-sun: url("../images/footer-icon-sun.svg")
+$toggle-bg-img-sun-for-dark: url("../images/footer-icon-sun-for-dark.svg")
+$toggle-bg-img-moon: url("../images/footer-icon-moon.svg")
+$toggle-bg-img-moon-for-dark: url("../images/footer-icon-moon-for-dark.svg")
+$popup-bg-img-close: url("../images/popup-icon-close.svg")
+$popup-bg-img-close-white: url("../images/popup-icon-close-white.svg")
+
+%font-title
+  line-height: 60px
+  font-size: 55px
+  font-weight: 700
+  letter-spacing: -0.5px
+  margin: 0
+  padding: 0
+  @media screen and (max-width: 768px)
+    line-height: 40px
+    font-size: 32px
+
+%font-subtitle
+  line-height: 28px
+  font-size: 18px
+  font-weight: 400
+  opacity: .7
+  margin: 0
+  @media screen and (max-width: 768px)
+    line-height: 18px
+    font-size: 12px
+
+*
+  //outline: 1px solid red
+
+.page 
+  background-color: $bg-light
+  width: 100%
+  min-width: 320px
+  font-family: "Inter", Arial, Helvetica, sans-serif
+  &_theme_dark
+    background-color: $bg-dark
+
+.header
+  position: fixed
+  width: 100%
+  background: $bg-light
+  z-index: 5
+  box-sizing: border-box
+  margin: 0
+  padding: 0
+  @media screen and (max-width: 768px)
+    position: inherit  
+  &_theme_dark
+    background-color: $bg-dark
+
+  &__container
+    max-width: 1440px
+    box-sizing: border-box  
+    margin: 0 auto
+    padding: 0
+    @media screen and (max-width: 768px)
+      display: flex
+      justify-content: right
+
+  &__links
+    display: flex
+    justify-content: flex-end
+    align-items: center
+    gap: 34px
+    margin: 0
+    padding: 28px 87px
+    list-style: none
+    @media screen and (max-width: 768px)
+      padding: 26px 18px
+
+  &__link
+    line-height: 18px
+    font-size: 14px
+    font-weight: 500    
+    text-decoration: none
+    color: $color-for-light-one
+    margin: 0
+    padding: 0
+    transition: all .2s linear    
+    @media screen and (max-width: 768px)
+      display: none  
+    &:hover
+      opacity: .75
+      cursor: pointer
+    &_theme_dark
+      color: $color-for-dark-one
+      &:hover
+        opacity: .65
+    
+  &__menu
+    display: none      
+    @media screen and (max-width: 768px)
+      display: flex
+      border: 0
+      flex-direction: column
+      gap: 8px
+      width: 22px
+      height: 22px
+      background: transparent
+      box-sizing: border-box
+      margin: 0
+      padding: 0
+
+  &__stick
+    width: 100%
+    height: 3px
+    background: $color-for-light-one
+    box-sizing: border-box
+    margin: 0
+    padding: 0
+    &_theme_dark
+      color: $color-for-dark-one
+
+    &_type_one
+      &_theme_dark
+        background: #fff
+    &_type_two
+      &_theme_dark
+        background: $color-for-dark-one
+    &_type_three
+      &_theme_dark
+        background: $color-for-dark-one
+
+.content
+  box-sizing: border-box
+  margin: 0
+  padding: 74px 0 0 0
+  @media screen and (max-width: 768px)
+    padding: 0
+    
+.lead 
+  display: grid
+  grid-template-columns: 39% 61%
+  grid-template-rows: 200px 212px 50px 354px
+  grid-template-areas: "title image" "subtitle image" "button image" "name image"
+  width: 100%
+  max-width: 1440px
+  max-height: 856px
+  color: $color-for-light-one
+  box-sizing: border-box
+  margin: 0 auto
+  padding: 0 0 79px 120px
+  @media screen and (max-width: 1439px)
+    grid-template-rows: 200px 272px 50px 304px
+    padding: 0 0 79px 40px    
+  @media screen and (max-width: 768px)
+    grid-template-columns: 1fr
+    grid-template-rows: 40px 348px 36px 46px
+    grid-template-areas: "title" "image" "subtitle" "button"
+    row-gap: 40px
+    max-width: 768px
+    padding: 40px 18px  
+  @media screen and (max-width: 556px)
+    grid-template-rows: 40px 348px 54px 46px
+  @media screen and (max-width: 390px)
+    grid-template-rows: 40px 348px 72px 46px    
+  @media screen and (max-width: 350px)
+    grid-template-rows: 80px 348px 72px 46px
+  &_theme_dark
+      color: $color-for-dark-one
+
+  &__image
+    width: 100%
+    height: 856px
+    background-image: $lead-bg-img
+    background-repeat: no-repeat
+    background-position: right top 20px
+    background-size: 610px 836px
+    box-sizing: border-box
+    margin: 0
+    padding: 20px 0 79px 0    
+    @media screen and (max-width: 768px)
+      height: 100%
+      background-position: right top
+      background-size: 254px 348px
+
+  &__bike-box
+    display: flex
+    align-items: center
+    justify-content: center
+    position: sticky
+    top: 467px
+    right: 100px
+    max-width: 440px
+    height: 300px
+    border-radius: 20px
+    background-color: #F4F4F4
+    box-shadow: -20px 60px 220px 0 rgba(0, 0, 0, 0.2) 
+    box-sizing: border-box
+    margin: 0
+    padding: 0     
+    @media screen and (max-width: 768px)
+      position: absolute
+      width: 234px
+      height: 160px
+      top: 335px
+      left: 48px
+    @media screen and (max-width: 350px)
+      top: 385px
+      left: 18px
+
+  &__bike-image
+    width: 340px
+    height: 260px
+    object-fit: cover
+    box-sizing: border-box
+    margin: 0
+    padding: 0
+    @media screen and (max-width: 768px)
+      width: 180px
+      height: 100%
+
+  &__title
+    grid-area: title
+    display: flex
+    align-items: flex-end
+    @extend %font-title
+    width: 100%
+    max-width: 460px 
+    box-sizing: border-box
+    margin: 0
+    padding: 0     
+    @media screen and (max-width: 768px)
+      max-width: 768px
+
+  &__subtitle
+    grid-area: subtitle
+    @extend %font-subtitle
+    color: $color-for-light-two
+    box-sizing: border-box
+    margin: 0
+    padding: 50px 20px 0 0
+    width: 100%
+    max-width: 460px      
+    @media screen and (max-width: 768px)
+      padding: 0
+      max-width: 768px
+    &_theme_dark
+      color: $color-for-dark-two
+
+  &__button
+    grid-area: button
+    border-radius: 4px
+    background: #24B47E
+    width: 180px
+    height: 50px
+    box-sizing: border-box
+    margin: 0
+    padding: 16px 10px
+    font-size: 14px
+    font-weight: 600
+    color: #fff
+    text-decoration: none
+    text-align: center
+    letter-spacing: 1px
+    background-image: linear-gradient(#319E75, #319E75)
+    background-repeat: no-repeat
+    background-size: 0% 100%
+    transition: background-size .5s, color .5s      
+    &:hover
+      background-size: 100% 100%
+      cursor: pointer      
+    @media screen and (max-width: 768px)
+      width: 100%
+      height: 46px
+      font-size: 13px
+
+  &__text-box
+    grid-area: name
+    display: flex
+    align-items: center
+    gap: 30px
+    width: max-content 
+    box-sizing: border-box
+    margin: 0
+    padding: 0       
+    @media screen and (max-width: 768px)
+      display: none
+
+  &__text
+    font-size: 18px
+    font-weight: 400
+    width: max-content
+    box-sizing: border-box
+    margin: 0
+    padding: 0
+
+  &__stick
+    width: 132px
+    height: 2px
+    background: #D7D4D4 
+    box-sizing: border-box
+    margin: 0
+    padding: 0   
+    @media screen and (max-width: 1100px)
+      width: 50px
+    &_theme_dark
+      color: #707070
+
+.line
+  display: none
+  @media screen and (max-width: 768px)
+    grid-area: line
+    display: block
+    width: 100%
+    height: 40px
+    border-bottom: solid 1px #E3E3E3
+    box-sizing: border-box
+    margin: 0
+    padding: 0
+
+.drive
+  display: grid
+  grid-template-columns: 55% 45%
+  grid-template-areas: "image text"
+  width: 100%
+  max-width: 1440px
+  color: $color-for-light-one
+  box-sizing: border-box
+  margin: 0 auto
+  padding: 0  
+  padding: 120px 120px 60px 120px
+  @media screen and (max-width: 1439px)
+    padding: 120px 40px 60px 40px
+  @media screen and (max-width: 768px)
+    grid-template-columns: 1fr
+    grid-template-areas: "line" "image" "text"
+    padding: 0 18px 40px 18px
+  &_theme_dark
+    color: $color-for-dark-one  
+
+  &__image
+    grid-area: image
+    width: 100%
+    max-width: 650px
+    height: 460px
+    object-fit: cover
+    box-sizing: border-box
+    margin: 0
+    padding: 0
+    @media screen and (max-width: 768px) 
+      padding: 20px 0 0 0
+      max-width: 768px
+      height: 100%
+      min-height: 224px
+
+  &__text
+    box-sizing: border-box
+    margin: 0
+    padding: 0 0 0 70px      
+    @media screen and (max-width: 1024px)
+      padding: 0 0 0 24px
+    @media screen and (max-width: 768px)
+      padding: 40px 0 0 0
+
+  &__title
+    line-height: 44px
+    font-size: 34px
+    font-weight: 600
+    letter-spacing: -0.5px
+    max-width: 470px
+    box-sizing: border-box
+    margin: 0
+    padding: 0      
+    @media screen and (max-width: 768px)
+      line-height: 29px
+      font-size: 23px
+
+  &__name
+    line-height: 32px
+    font-size: 20px
+    font-weight: 500
+    width: max-content
+    box-sizing: border-box
+    margin: 259px 0 0 0 
+    padding: 0         
+    @media screen and (max-width: 1167px)
+      margin: 215px 0 0 0      
+    @media screen and (max-width: 889px)
+      margin: 171px 0 0 0      
+    @media screen and (max-width: 768px)
+      line-height: 22px
+      font-size: 14px
+      margin: 37px 0 0 0
+
+  &__subname
+    line-height: 28px
+    font-size: 16px
+    font-weight: 400
+    color: $color-for-light-two
+    opacity: .7
+    width: max-content
+    margin: 6px 0 0 0
+    padding: 0      
+    @media screen and (max-width: 768px)
+      line-height: 16px
+      font-size: 10px
+      margin: 4px 0 0 0
+    &_theme_dark
+      color: $color-for-dark-three
+
+.road
+  position: relative
+  width: 100%
+  max-width: 1440px
+  box-sizing: border-box
+  margin: 0 auto
+  padding: 0  
+
+  &__container
+    display: grid
+    grid-template-columns: 1fr
+    grid-template-rows: 60px 242px 400px
+    grid-template-areas: "title" "description" "image"
+    width: 100%
+    box-sizing: border-box
+    margin: 0
+    padding: 60px 0 0 120px
+    overflow: hidden  
+    @media screen and (max-width: 1439px)
+      padding: 60px 40px 0 40px
+    @media screen and (max-width: 768px)
+      grid-template-columns: 1fr 1fr
+      grid-template-rows: 40px 40px 175px 90px
+      grid-template-areas: "line line" "title slider-buttons" "image image" "description description"
+      min-height: 505px
+      padding: 2px 18px 40px 18px
+
+  &__title
+    @extend %font-title
+    color: $color-for-light-one
+    width: max-content
+    @media screen and (max-width: 768px)
+      margin: 40px 0 0 0  
+    &_theme_dark
+      color: $color-for-dark-one
+    &_item_gravel 
+      &_theme_dark
+        color: $color-for-dark-one
+    &_item_tt 
+      &_theme_dark
+        color: $color-for-dark-one  
+
+  &__description
+    grid-area: description
+    @extend %font-subtitle
+    color: $color-for-light-two
+    padding: 50px 0 80px 0
+    width: 100%
+    max-width: 460px      
+    @media screen and (max-width: 768px)
+      max-width: 768px
+      margin: 120px 0 0 0
+      padding: 0
+    &_theme_dark
+      color: $color-for-dark-three
+    &_item_gravel
+      &_theme_dark
+        color: $color-for-dark-three
+    &_item_tt
+      &_theme_dark
+        color: $color-for-dark-three
+
+  &__items
+    grid-area: image
+    display: flex
+    gap: 40px
+    box-sizing: border-box
+    margin: 0 -20px 0 0
+    padding: 0      
+    @media screen and (max-width: 768px)
+      justify-content: center
+      margin: 82px 0 0 0 
+
+  &__item
+    display: flex
+    align-items: flex-end
+    width: 650px
+    height: 400px
+    box-sizing: border-box
+    margin: 0
+    padding: 0 0 16px 0
+    @media screen and (max-width: 768px)
+      width: 100%
+      max-width: 768px
+      height: 175px
+      padding: 0 0 14px 0
+
+    &_hidden      
+      @media screen and (max-width: 768px)
+        display: none
+
+    &_theme_one
+      background: $road-bg-img-one
+      background-size: cover
+      background-position: center
+
+    &_theme_two
+      background: $road-bg-img-two
+      background-size: cover
+      background-position: center
+
+    &_theme_three
+      background: $road-bg-img-three
+      background-size: cover
+      background-position: center
+
+  &__map
+    display: flex
+    align-items: flex-end
+    width: 100px
+    height: 40px
+    background-image: $road-bg-img-map
+    background-position: center
+    background-size: cover
+    box-sizing: border-box
+    margin: 0
+    padding: 0 34px 12px 16px      
+    @media screen and (max-width: 768px)
+      width: 70px
+      height: 28px
+      padding: 0 24px 8px 11px
+
+  &__map-curve
+    width: 50px
+    object-fit: cover
+    box-sizing: border-box
+    margin: 0
+    padding: 0      
+    @media screen and (max-width: 768px)
+      width: 35px 
+
+  &__slider-panel
+    grid-area: slider-buttons
+    display: flex
+    align-items: center
+    gap: 20px
+    width: 100%
+    min-height: 150px
+    box-sizing: border-box
+    margin: 0
+    padding: 0 120px      
+    @media screen and (max-width: 1439px)
+      padding: 0 40px
+    @media screen and (max-width: 768px)
+      position: absolute
+      top: 24px
+      right: 18px
+      width: 58px
+      gap: 10px
+      padding: 0
+
+  &__slider-control
+    width: 50px
+    height: 50px
+    border: 0
+    border-radius: 50%
+    box-sizing: border-box
+    margin: 0
+    padding: 0
+    transition: all .2s ease-in-out
+    &:hover
+      opacity: .6
+      cursor: pointer      
+    @media screen and (max-width: 768px)
+      width: 24px
+      height: 24px   
+
+    &_type_left
+      background-color: #EBEBEB
+      background-image: $road-bg-slider-left
+      background-repeat: no-repeat
+      background-size: 12px
+      background-position: left 16px center      
+      @media screen and (max-width: 768px)
+        background-size: 7px
+        background-position: left 8px center
+      &_theme_dark
+        background-color: #434343 
+        background-image: $road-bg-slider-left-white
+
+    &_type_right
+      background-color: #EBEBEB
+      background-image: $road-bg-slider-right
+      background-repeat: no-repeat
+      background-size: 12px
+      background-position: right 16px center        
+      @media screen and (max-width: 768px)
+        background-size: 7px
+        background-position: right 7px center
+      &_theme_dark
+        background-color: #434343 
+        background-image: $road-bg-slider-right-white
+
+.list
+  display: none
+  @media screen and (max-width: 768px)
+    display: flex
+
+.none
+  position: absolute
+  top: -500px
+
+.card
+  transition: all .5s ease-in-out
+
+.anime
+  display: none
+  transform: scale(0)
+  opacity: 0
+
+.bike
+  width: 100%
+  max-width: 1440px
+  box-sizing: border-box
+  margin: 0 auto
+  padding: 0
+
+  &__container
+    display: grid
+    grid-template-columns: 1fr
+    grid-template-rows: 60px 1fr
+    grid-template-areas: "text" "pics"
+    width: 100%
+    box-sizing: border-box
+    margin: 0
+    padding: 70px 120px
+    @media screen and (max-width: 1439px)
+     padding: 60px 40px 0 40px
+    @media screen and (max-width: 768px)
+      grid-template-rows: 42px 151px 1fr
+      grid-template-areas: "line" "text" "pics"
+      padding: 0 18px 40px 18px
+
+  &__text
+    grid-area: text
+    display: flex
+    justify-content: space-between
+    align-items: flex-end
+    width: 100%
+    box-sizing: border-box
+    margin: 0
+    padding: 0
+    @media screen and (max-width: 768px)
+      flex-direction: column
+      align-items: flex-start
+
+  &__title
+    @extend %font-title
+    width: max-content
+    margin: 0
+    padding: 0
+    @media screen and (max-width: 768px)
+      line-height: 40px
+      font-size: 32px
+      margin: 40px 0 0 0
+    &_theme_dark
+        color: $color-for-dark-one 
+
+  &__links
+    display: flex
+    justify-content: space-between
+    align-items: flex-end
+    gap: 40px
+    width: max-content
+    box-sizing: border-box
+    margin: 0
+    padding: 0
+    list-style: none
+    @media screen and (max-width: 768px)
+      display: none
+
+  &__link
+    line-height: 34px
+    font-size: 18px
+    font-weight: 400
+    text-decoration: none
+    color: $color-for-light-two
+    margin: 0
+    padding: 0
+    cursor: pointer
+    opacity: .7
+    &:hover
+      opacity: .6
+    &_active
+      font-weight: 600
+      color: $color-for-light-one
+      opacity: 1
+      &:hover
+        opacity: .75
+      &_theme_dark
+        color: $color-for-dark-one
+        &:hover
+          opacity: .65
+  
+  &__link_highway
+    &_theme_dark
+      color: $color-for-dark-three
+      &:hover
+        opacity: .5
+
+  &__link_gravel
+    &_theme_dark
+      color: $color-for-dark-three
+      &:hover
+        opacity: .5
+
+  &__link_tt
+    &_theme_dark
+      color: $color-for-dark-three
+      &:hover
+        opacity: .5    
+
+  &__accordion
+    display: none
+    @media screen and (max-width: 768px)
+      display: flex
+      line-height: 14px
+      font-size: 11px
+      font-weight: 600
+      width: 114px
+      height: 30px
+      background: transparent
+      appearance: none
+      background: $accordion-bg-img-arrow
+      background-repeat: no-repeat
+      background-position: right 12px center
+      border: solid 1px #E3E3E3
+      border-radius: 2px
+      box-sizing: border-box
+      margin: 0
+      padding: 0 12px
+      list-style: none
+      &_theme_dark
+        color: $color-for-dark-one
+        background: $accordion-bg-img-arrow-white
+        background-repeat: no-repeat
+        background-position: right 12px center
+        background-size: 13%
+        border: solid 1px rgba(125, 125, 125, 0.5)
+
+  &__slider-link
+    line-height: 14px
+    font-size: 11px
+    font-weight: 400
+    color: $color-for-light-two
+    margin: 0
+    padding: 0
+    cursor: pointer
+    opacity: .7
+    &:hover
+      opacity: .6 
+
+  &__desktop
+    display: none
+    box-sizing: border-box
+    margin: 0 auto
+    padding: 0
+
+  &__desktop_view
+    display: flex
+    @media screen and (max-width: 768px)
+      display: none
+
+  &__pics
+    grid-area: pics
+    display: flex
+    justify-content: center
+    align-items: center
+    gap: 30px
+    box-sizing: border-box
+    margin: 0
+    padding: 120px 0 44px 0
+    list-style: none
+    @media screen and (max-width: 1280px)
+      gap: 12px
+      padding: 60px 0 0 0
+    @media screen and (max-width: 768px)
+      padding: 20px 0
+      gap: 0
+      justify-content: space-around
+
+  &__link-away
+    text-decoration: none
+    margin: 0
+    padding: 0
+
+  &__pic
+    display: flex
+    flex-direction: column
+    align-items: center
+    gap: 22px
+    width: 100%
+    max-width: 380px
+    max-height: 380px
+    border-radius: 20px
+    background: $bg-light
+    box-shadow: 0 20px 140px 0 rgba(0, 0, 0, 0.06)
+    box-sizing: border-box
+    margin: 0
+    padding: 20px
+    &:hover
+      box-shadow: 0 20px 140px 0 rgba(0, 0, 0, 0.11)
+    &_theme_dark
+      &:hover
+        box-shadow: 0 20px 140px 0 rgba(0, 0, 0, 0.55)
+    @media screen and (max-width: 1280px)
+      gap: 3px
+      margin: 0 auto
+      padding: 15px 15px 16px 15px
+    @media screen and (max-width: 768px)
+      max-width: 284px
+      gap: 3px
+      padding: 15px 15px 16px 15px
+      box-shadow: 0 5px 25px 0 rgba(0, 0, 0, 0.06)
+
+  &__image
+    width: 100%
+    max-width: 340px
+    object-fit: contain
+    @media screen and (max-width: 1024px)
+      max-width: 255px
+
+  &__name
+    line-height: 22px
+    font-size: 18px
+    font-weight: 600
+    color: $color-for-light-one
+    width: 100%
+    margin: 0 0 0 -26px
+    padding: 20px 0 0 0
+    @media screen and (max-width: 1280px)
+      line-height: 18px
+      font-size: 14px
+      text-align: center
+      margin: 0
+      padding: 0
+    &_caledonia
+      color: $color-for-light-one
+      &_theme_dark        
+        color: $color-for-dark-one
+        @media screen and (max-width: 1280px)
+          color: $color-for-light-one
+    &_cannondale
+      color: $color-for-light-one
+      &_theme_dark
+        color: $color-for-dark-one
+        @media screen and (max-width: 1280px)
+          color: $color-for-light-one
+    &_trek
+      color: $color-for-light-one
+      &_theme_dark
+        color: $color-for-dark-one
+        @media screen and (max-width: 1280px)
+          color: $color-for-light-one
+    &_aspero
+      color: $color-for-light-one
+      &_theme_dark
+        color: $color-for-dark-one
+        @media screen and (max-width: 1280px)
+          color: $color-for-light-one
+    &_diverge
+      color: $color-for-light-one
+      &_theme_dark
+        color: $color-for-dark-one
+        @media screen and (max-width: 1280px)
+          color: $color-for-light-one
+    &_topstone
+      color: $color-for-light-one
+      &_theme_dark
+        color: $color-for-dark-one
+        @media screen and (max-width: 1280px)
+          color: $color-for-light-one
+    &_shiv
+      color: $color-for-light-one
+      &_theme_dark
+        color: $color-for-dark-one
+        @media screen and (max-width: 1280px)
+          color: $color-for-light-one
+    &_one
+      color: $color-for-light-one
+      &_theme_dark
+        color: $color-for-dark-one
+        @media screen and (max-width: 1280px)
+          color: $color-for-light-one
+    &_series
+      color: $color-for-light-one
+      &_theme_dark
+        color: $color-for-dark-one
+        @media screen and (max-width: 1280px)
+          color: $color-for-light-one
+
+  &__slider
+    @media screen and (max-width: 768px)
+      display: flex
+      flex-direction: column
+      box-sizing: border-box
+      margin: 0 auto
+      padding: 0
+
+    &_view
+      @media screen and (max-width: 768px)
+        display: none
+
+  &__pics
+    grid-area: pics
+    display: flex
+    justify-content: center
+    align-items: center
+    gap: 30px
+    box-sizing: border-box
+    margin: 0
+    padding: 120px 0 44px 0
+    list-style: none
+    @media screen and (max-width: 1280px)
+      gap: 12px
+      padding: 60px 0 0 0
+    @media screen and (max-width: 768px)
+      padding: 20px 0
+      gap: 0
+      justify-content: space-around
+
+  &__indicators
+    display: none
+    @media screen and (max-width: 768px)
+      list-style: none
+      display: flex
+      gap: 5px
+      justify-content: center
+      width: 100%
+      box-sizing: border-box
+      margin: 0
+      padding: 0
+
+  &__indicator
+    width: 4px
+    height: 4px
+    border-radius: 50%
+    background: #CACACA
+    cursor: pointer
+       
+.training
+  display: grid
+  grid-template-columns: 50% 50%
+  grid-template-rows: 60px 1fr 34px
+  grid-template-areas: "title image" "subtitle image" "links image"
+  width: 100%
+  max-width: 1440px
+  column-gap: 20px
+  box-sizing: border-box
+  margin: 0 auto
+  padding: 143px 120px 120px 120px  
+  @media screen and (max-width: 1439px)
+    padding: 120px 40px 60px 40px  
+  @media screen and (max-width: 768px)
+    grid-template-columns: 1fr
+    grid-template-rows: 40px 40px 175px 90px
+    grid-template-areas: "line" "title" "image" "subtitle" "links"
+    padding: 0 18px 60px 18px
+
+  &__title
+    grid-area: title
+    @extend %font-title
+    color: $color-for-light-one
+    max-width: 460px
+    margin: 0
+    padding: 0    
+    @media screen and (max-width: 768px)
+      max-width: 768px
+      margin: 40px 0 0 0
+    &_theme_dark
+      color: $color-for-dark-one
+
+  &__subtitle
+    grid-area: subtitle
+    @extend %font-subtitle
+    color: $color-for-light-two
+    margin: 0
+    padding: 45px 0 100px 0
+    width: 100%
+    max-width: 460px
+    @media screen and (max-width: 768px)
+      max-width: 768px
+      margin: 170px 0 0 0
+      padding: 0
+    &_theme_dark
+      color: $color-for-dark-three
+
+  &__links
+    grid-area: links
+    display: flex
+    gap: 30px
+    width: max-content
+    box-sizing: border-box
+    margin: 0
+    padding: 0
+    list-style: none
+    @media screen and (max-width: 768px)
+      margin: 210px 0 0 0
+
+  &__link
+    line-height: 28px
+    font-size: 18px
+    font-weight: 600
+    color: $color-for-light-one
+    text-decoration: none
+    margin: 0
+    padding: 0      
+    &:hover
+      opacity: .75
+      cursor: pointer      
+    @media screen and (max-width: 768px)
+      line-height: 20px
+      font-size: 14px
+
+    &_strava
+      &_theme_dark
+        color: $color-for-dark-one
+        &:hover
+          opacity: .65
+
+    &_komoot
+      &_theme_dark
+        color: $color-for-dark-one
+        &:hover
+          opacity: .65
+
+  &__image
+    grid-area: image
+    width: 100%
+    max-width: 580px
+    height: 460px
+    object-fit: cover
+    margin: 0
+    padding: 0
+    @media screen and (max-width: 768px)
+      max-width: 768px
+      height: 100%
+      min-height: 225px
+      margin: 80px 0 0 0
+
+.footer
+  width: 100%
+  background: $bg-footer-light
+  box-sizing: border-box
+  margin: 0
+  padding: 0
+  &_theme_dark
+    background: $bg-footer-dark
+
+  &__container
+    display: flex
+    flex-direction: column
+    max-width: 1440px
+    position: relative
+    box-sizing: border-box
+    margin: 0 auto
+    padding: 80px 120px 60px 120px  
+    @media screen and (max-width: 1439px)
+      padding: 120px 40px 60px 40px  
+    @media screen and (max-width: 768px)
+      padding: 60px 18px 25px 18px
+
+  &__title
+    width: 229px
+    line-height: 32px
+    font-size: 24px
+    font-weight: 600
+    color: $color-for-light-one
+    margin: 0
+    padding: 0 0 48px 0      
+    @media screen and (max-width: 768px)
+      padding: 0 0 40px 0
+    &_theme_dark
+      color: $color-for-dark-one
+
+  &__email
+    outline: none
+    border: solid 1px rgba(199, 199, 199, 0.5)
+    position: relative
+    width: 100%
+    max-width: 360px
+    border-radius: 4px
+    box-sizing: border-box
+    margin: 0
+    padding: 0
+    &:focus
+      outline: 0
+    &_theme_dark
+      border: solid 1px rgba(125, 125, 125, 0.5)
+
+  &__email-input
+    outline: none
+    width: 100%
+    max-width: 280px
+    border: none
+    border-radius: 4px
+    line-height: 28px
+    font-size: 13px
+    font-weight: 500
+    color: $color-for-light-one
+    opacity: .7
+    background: transparent
+    margin: 0
+    padding: 10px 0 10px 20px
+    &:hover
+      opacity: 1
+      cursor: pointer
+    &:focus::-webkit-input-placeholder
+      color: transparent      
+    &:focus::-moz-placeholder
+      color: transparent      
+    &:focus:-moz-placeholder
+      color: transparent      
+    &:focus:-ms-input-placeholder
+      color: transparent
+    &_theme_dark
+      color: $color-for-dark-one    
+
+  &__email-submit
+    position: absolute
+    align-items: center
+    top: 11px
+    right: 22px
+    width: max-content
+    line-height: 28px
+    font-size: 13px
+    font-weight: 500
+    cursor: pointer
+    color: $color-for-light-one
+    box-sizing: border-box
+    margin: 0
+    padding: 0
+    border: 0
+    transition: all .3s ease-in-out
+    opacity: 0
+    visibility: hidden
+    &_theme_dark
+      background: $bg-footer-dark
+      color: $color-for-dark-one
+
+    &_visible
+      visibility: visible
+      opacity: 1
+
+  &__bottom
+    display: flex
+    justify-content: space-between
+    align-items: flex-end
+    box-sizing: border-box
+    margin: 0
+    padding: 86px 0 0 0    
+    @media screen and (max-width: 768px)
+      padding: 100px 0 0 0
+
+  &__copyright
+    line-height: 20px
+    font-size: 14px
+    font-weight: 600
+    color: #CFCFCF
+    &_theme_dark
+      color: #565656
+
+  &__toggle-panel
+    display: flex
+    align-items: center
+    justify-content: center
+    width: 136px
+    height: 28px
+    background: $toggle-bg-img-sun, $toggle-bg-img-moon
+    background-repeat: no-repeat
+    background-position: left center, right center
+    background-size: 28px, 20px
+    box-sizing: border-box
+    margin: 0
+    padding: 0    
+    @media screen and (max-width: 768px)
+      display: none
+    &_theme_dark
+      background: $toggle-bg-img-sun-for-dark, $toggle-bg-img-moon-for-dark
+      background-repeat: no-repeat
+      background-position: left center, right center
+      background-size: 28px, 20px
+
+  &__logo
+    display: none     
+    @media screen and (max-width: 768px)
+      display: block
+      width: 38px
+      height: 38px
+      position: absolute
+      bottom: 16px
+      right: 16px
+
+.toggle
+  cursor: pointer
+  display: inline-block      
+  &:hover .toggle__switch:before
+    background: #24B47E
+    box-shadow: 0 0 0 0px #fff
+
+  &__checkbox
+    position: absolute
+    visibility: hidden    
+    &:checked + .toggle__switch
+      background: #545454    
+    &:checked + .toggle__switch:before
+      left: 22px
+
+  &__switch
+    display: inline-block
+    background: #fff
+    border-radius: 9999px
+    width: 44px
+    height: 24px
+    position: relative
+    vertical-align: middle
+    transition: background 0.25s      
+    &:before, .toggle__switch:after
+        content: ""
+    &:before
+      display: block
+      background: #24B47E
+      border-radius: 50%
+      box-shadow: 0 0 0 0px #fff
+      width: 20px
+      height: 20px
+      position: absolute
+      top: 2px
+      left: 2px
+      transition: left 0.25s
+
+.popup
+  display: none
+  width: 100%
+  height: 100%
+  position: absolute
+  top: 0
+  left: 0
+  margin: 0
+  padding: 0
+  background: $bg-light
+  &_theme_dark
+    background: $bg-dark
+
+  &_opened
+    display: flex
+
+  &__close
+    display: flex
+    align-self: flex-end
+    width: 28px
+    height: 28px
+    background: $popup-bg-img-close
+    background-color: transparent
+    background-size: cover
+    border: 0
+    transition: opacity .2s ease-in-out
+    &:hover
+      opacity: .75
+      cursor: pointer
+    &_theme_dark
+      background: $popup-bg-img-close-white      
+
+  &__container
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+    width: 100%
+    box-sizing: border-box
+    margin: 0
+    padding: 18px 14px 38px 14px  
+
+  &__link
+    line-height: 18px
+    font-size: 18px
+    font-weight: 500
+    color: $color-for-light-one
+    text-decoration: none
+    margin: 0
+    padding: 0
+    transition: opacity .3s ease-in-out
+    &:hover
+      opacity: .75
+
+    &_road
+      &_theme_dark
+        color: $color-for-dark-one
+
+    &_bike
+      &_theme_dark
+        color: $color-for-dark-one
+
+    &_training
+      &_theme_dark
+        color: $color-for-dark-one
+
+  &__links
+    display: flex
+    flex-direction: column
+    align-items: center
+    gap: 35px
+    width: 100%
+    box-sizing: border-box
+    margin: 94px 0 0 0
+    padding: 0
+    list-style: none
+
+  &__toggle-panel
+    display: flex
+    align-items: center
+    justify-content: center
+    width: 136px
+    height: 28px
+    background: $toggle-bg-img-sun, $toggle-bg-img-moon
+    background-repeat: no-repeat
+    background-position: left center, right center
+    background-size: 28px, 20px
+    box-sizing: border-box
+    margin: 316px auto 0 auto
+    padding: 0
+    &_theme_dark
+      background: $toggle-bg-img-sun-for-dark, $toggle-bg-img-moon-for-dark
+      background-repeat: no-repeat
+      background-position: left center, right center
+      background-size: 28px, 20px
