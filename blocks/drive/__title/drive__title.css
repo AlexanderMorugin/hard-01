@@ -1,0 +1,16 @@
+.drive__title {
+  line-height: 44px;
+  font-size: 34px;
+  font-weight: 600;
+  letter-spacing: -0.5px;
+  max-width: 470px;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+@media screen and (max-width: 768px) {
+  .drive__title {
+    line-height: 29px;
+    font-size: 23px;
+  }
+}/*# sourceMappingURL=drive__title.css.map */

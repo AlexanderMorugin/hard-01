@@ -1,0 +1,13 @@
+.footer__bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 86px 0 0 0;
+}
+@media screen and (max-width: 768px) {
+  .footer__bottom {
+    padding-top: 100px;
+  }
+}/*# sourceMappingURL=footer__bottom.css.map */

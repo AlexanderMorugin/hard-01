@@ -7,17 +7,17 @@
     <meta name="author" content="Александр Моругин">
     <meta name="keywords" content="html, css, javascript">
     <title>Учебный проект HARD - 01</title>
-    <link rel="stylesheet" type="text/css" href="./styles/style.css">
+    <link rel="stylesheet" type="text/css" href="./pages/index.css">
     <link rel="stylesheet" type="text/css" href="./vendor/slider/slider.css">
     <script src="./vendor/slider/slider.js" defer></script>
-    <script src="./pages/index.js" defer></script>
+    <script src="./scripts/index.js" defer></script>
   </head>
 <body class="page">
   <header class="header">    
     <nav class="header__container">
       <ul class="header__links">
         <li>
-          <a class="header__link header__link_road" href="#road">Покрытия или градиенты</a>          
+          <a class="header__link header__link_road" href="#road">Покрытия и градиенты</a>          
         </li>
         <li>
             <a class="header__link header__link_bike" href="#bike">Велосипеды</a>
@@ -25,12 +25,10 @@
         <li>
             <a class="header__link header__link_training" href="#training">Тренировки</a>
         </li>
-        <li>
-          <button type="button" class="header__menu header__menu_open">
-            <div class="header__stick header__stick_type_one"></div>
-            <div class="header__stick header__stick_type_two"></div>
-            <div class="header__stick header__stick_type_three"></div>
-          </button>
+        <li class="header__menu header__menu_open">
+            <div class="header__stick"></div>
+            <div class="header__stick"></div>
+            <div class="header__stick"></div>
         </li>
       </ul> 
     </nav>       
@@ -74,12 +72,15 @@
                 Гонки проходят в командном пелотоне, но тренироваться можно и самостоятельно.
               </p>
               <div class="road__items">
-                <div class="road__item road__item_theme_one">
+                <div class="road__item">
+                  <img class="road__image" src="./images/highway-1.jpg" alt="Дорога для велосипедов Шоссе">
                   <div class="road__map">
                     <img class="road__map-curve" src="./images/map-1.svg" alt="Карта пути">
-                  </div>
+                  </div>                  
                 </div>
-                <div class="road__item road__item_hidden road__item_theme_two"></div>
+                <div class="road__item road__item_hidden">
+                  <img class="road__image" src="./images/highway-2.jpg" alt="Дорога для велосипедов Шоссе">
+                </div>
               </div>
               <!-- Content 1 -->
             </div>
@@ -93,12 +94,15 @@
                 всё для того чтобы проехать по лёгкому бездорожью.
               </p>
               <div class="road__items">
-                <div class="road__item road__item_theme_two">
+                <div class="road__item">
+                  <img class="road__image" src="./images/highway-2.jpg" alt="Дорога для велосипедов Грэвел">
                   <div class="road__map">
                     <img class="road__map-curve" src="./images/map-2.svg" alt="Карта пути">
                   </div>
                 </div>
-                <div class="road__item road__item_hidden road__item_theme_three"></div>
+                <div class="road__item road__item_hidden">
+                  <img class="road__image" src="./images/highway-3.jpg" alt="Дорога для велосипедов Грэвел">
+                </div>
               </div>  
               <!-- Content 2 -->
             </div>
@@ -111,12 +115,15 @@
                 ТТ — это велосипед для триатлона или раздельного старта, гооняют на таком велике только по равнинному асфальту, велик очень быстрые и аэродинамичный.
               </p>
               <div class="road__items">
-                <div class="road__item road__item_theme_three">
+                <div class="road__item">
+                  <img class="road__image" src="./images/highway-3.jpg" alt="Дорога для велосипедов ТТ">
                   <div class="road__map">
                     <img class="road__map-curve" src="./images/map-3.svg" alt="Карта пути">
                   </div>
                 </div>
-                <div class="road__item road__item_hidden road__item_theme_one"></div>
+                <div class="road__item road__item_hidden">
+                  <img class="road__image" src="./images/highway-1.jpg" alt="Дорога для велосипедов ТТ">
+                </div>
               </div>  
               <!-- Content 3 -->
             </div>
@@ -138,13 +145,11 @@
         <div class="bike__text">
           <h2 class="bike__title">Велосипеды</h2>
           <!-- nav for desktop -->
-          <nav>
-            <ul class="bike__links">
-              <li class="bike__link bike__link_highway bike__link_active" data-filter="highway">Шоссе</li>
-              <li class="bike__link bike__link_gravel" data-filter="gravel">Грэвел</li>
-              <li class="bike__link bike__link_tt" data-filter="tt">TT</li>
-            </ul>
-          </nav>
+          <ul class="bike__links">
+            <li class="bike__link bike__link_highway bike__link_active" data-filter="highway">Шоссе</li>
+            <li class="bike__link bike__link_gravel" data-filter="gravel">Грэвел</li>
+            <li class="bike__link bike__link_tt" data-filter="tt">TT</li>
+          </ul>
           <!-- nav for mobile --> 
           <select size="1" class="bike__accordion">
             <option class="bike__slider-link" value="mobile-highway" selected>Шоссе</option>
@@ -365,28 +370,21 @@
   </main> 
   <footer class="footer">
     <div class="footer__container">      
-      <h2 class="footer__title">Подпишитесь на рассылку —</h2> 
-         
-      <form class="footer__email"> 
-                
-        <input class="footer__email-input" minlength="5" maxlength="50" type="email" name="" id="" placeholder=" Ваш e-mail" value="">
-        
-        <button class="footer__email-submit" type="submit">ok</button>
-         
-      </form>
-       
+      <h2 class="footer__title">Подпишитесь на рассылку —</h2>         
+      <form class="footer__email">                
+        <input class="footer__email-input" minlength="5" maxlength="50" type="email" name="email" placeholder=" Ваш e-mail">        
+        <button class="footer__email-submit" type="submit">ok</button>         
+      </form>       
       <div class="footer__bottom">
         <p class="footer__copyright">&copy; Road Club 2021</p>
         <div class="footer__toggle-panel">
           <label class="toggle">
             <input class="toggle__checkbox" type="checkbox">
-            <div class="toggle__switch"></div>
+            <span class="toggle__switch"></span>
           </label>        
         </div>
-          <img class="footer__logo" src="./images/footer-icon-logo.svg" alt="Логотип">
-        </div>        
-      </div>
-  
+        <img class="footer__logo" src="./images/footer-icon-logo.svg" alt="Логотип">
+      </div>        
     </div>
   </footer>
  
@@ -408,7 +406,7 @@
       <div class="popup__toggle-panel">
         <label class="toggle">
           <input class="toggle__checkbox" type="checkbox">
-          <div class="toggle__switch toggle__switch_popup"></div>
+          <span class="toggle__switch toggle__switch_popup"></span>
         </label>
       </div>      
     </div>

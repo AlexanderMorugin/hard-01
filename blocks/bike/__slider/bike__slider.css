@@ -1,0 +1,9 @@
+@media screen and (max-width: 768px) {
+  .bike__slider {
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    margin: 0 auto;
+    padding: 0;
+  }
+}/*# sourceMappingURL=bike__slider.css.map */

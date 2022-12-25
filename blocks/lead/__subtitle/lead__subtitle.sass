@@ -1,0 +1,15 @@
+@import "../../../components/font/font"
+@import "../../../components/color/color"
+  
+.lead__subtitle
+  grid-area: subtitle
+  @extend %font-subtitle
+  color: $color-for-light-two
+  box-sizing: border-box
+  margin: 0
+  padding: 50px 20px 0 0
+  width: 100%
+  max-width: 460px      
+  @media screen and (max-width: 768px)
+    padding: 0
+    max-width: 768px

@@ -1,0 +1,19 @@
+.footer__toggle-panel {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 136px;
+  height: 28px;
+  background: url("../../images/footer-icon-sun.svg"), url("../../images/footer-icon-moon.svg");
+  background-repeat: no-repeat;
+  background-position: left center, right center;
+  background-size: 28px, 20px;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+@media screen and (max-width: 768px) {
+  .footer__toggle-panel {
+    display: none;
+  }
+}/*# sourceMappingURL=footer__toggle-panel.css.map */

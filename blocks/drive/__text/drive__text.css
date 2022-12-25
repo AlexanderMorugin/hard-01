@@ -1,0 +1,15 @@
+.drive__text {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0 0 0 70px;
+}
+@media screen and (max-width: 1024px) {
+  .drive__text {
+    padding-left: 24px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .drive__text {
+    padding-top: 40px;
+  }
+}/*# sourceMappingURL=drive__text.css.map */

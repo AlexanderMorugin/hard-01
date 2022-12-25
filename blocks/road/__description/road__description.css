@@ -1,0 +1,29 @@
+.road__description {
+  line-height: 28px;
+  font-size: 18px;
+  font-weight: 400;
+  opacity: 0.7;
+  margin: 0;
+}
+@media screen and (max-width: 768px) {
+  .road__description {
+    line-height: 18px;
+    font-size: 12px;
+  }
+}
+
+.road__description {
+  grid-area: description;
+  color: #222;
+  margin: 0;
+  padding: 50px 0 80px 0;
+  width: 100%;
+  max-width: 460px;
+}
+@media screen and (max-width: 768px) {
+  .road__description {
+    max-width: 768px;
+    margin-top: 120px;
+    padding: 0;
+  }
+}/*# sourceMappingURL=road__description.css.map */

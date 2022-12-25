@@ -1,0 +1,26 @@
+.lead__button
+  grid-area: button
+  border-radius: 4px
+  background: #24B47E
+  width: 180px
+  height: 50px
+  box-sizing: border-box
+  margin: 0
+  padding: 16px 10px
+  font-size: 14px
+  font-weight: 600
+  color: #fff
+  text-decoration: none
+  text-align: center
+  letter-spacing: 1px
+  background-image: linear-gradient(#319E75, #319E75)
+  background-repeat: no-repeat
+  background-size: 0% 100%
+  transition: background-size .5s, color .5s      
+  &:hover
+    background-size: 100% 100%
+    cursor: pointer      
+  @media screen and (max-width: 768px)
+    width: 100%
+    height: 46px
+    font-size: 13px

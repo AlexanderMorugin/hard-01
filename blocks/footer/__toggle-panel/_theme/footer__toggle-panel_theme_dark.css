@@ -1,0 +1,6 @@
+.footer__toggle-panel_theme_dark {
+  background: url("../../images/footer-icon-sun-for-dark.svg"), url("../../images/footer-icon-moon-for-dark.svg");
+  background-repeat: no-repeat;
+  background-position: left center, right center;
+  background-size: 28px, 20px;
+}/*# sourceMappingURL=footer__toggle-panel_theme_dark.css.map */

@@ -1,0 +1,14 @@
+.road__image {
+  display: block;
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 650px;
+  height: 400px;
+}
+@media screen and (max-width: 768px) {
+  .road__image {
+    width: 100%;
+    max-width: 768px;
+    height: 175px;
+  }
+}/*# sourceMappingURL=road__image.css.map */

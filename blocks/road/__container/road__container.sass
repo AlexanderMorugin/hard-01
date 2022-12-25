@@ -1,0 +1,18 @@
+.road__container
+  display: grid
+  grid-template-columns: 1fr
+  grid-template-rows: 60px 242px 400px
+  grid-template-areas: "title" "description" "image"
+  width: 100%
+  box-sizing: border-box
+  margin: 0
+  padding: 60px 0 0 120px
+  overflow: hidden  
+  @media screen and (max-width: 1439px)
+    padding: 60px 40px 0 40px
+  @media screen and (max-width: 768px)
+    grid-template-columns: 1fr 1fr
+    grid-template-rows: 40px 40px 175px 90px
+    grid-template-areas: "line line" "title slider-buttons" "image image" "description description"
+    min-height: 505px
+    padding: 2px 18px 40px 18px

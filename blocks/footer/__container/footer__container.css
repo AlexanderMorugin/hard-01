@@ -1,0 +1,19 @@
+.footer__container {
+  display: flex;
+  flex-direction: column;
+  max-width: 1440px;
+  position: relative;
+  box-sizing: border-box;
+  margin: 0 auto;
+  padding: 80px 120px 60px 120px;
+}
+@media screen and (max-width: 1439px) {
+  .footer__container {
+    padding: 120px 40px 60px 40px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .footer__container {
+    padding: 60px 18px 25px 18px;
+  }
+}/*# sourceMappingURL=footer__container.css.map */

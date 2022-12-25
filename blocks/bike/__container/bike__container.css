@@ -1,0 +1,22 @@
+.bike__container {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 60px 1fr;
+  grid-template-areas: "text" "pics";
+  width: 100%;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 70px 120px;
+}
+@media screen and (max-width: 1439px) {
+  .bike__container {
+    padding: 60px 40px 0 40px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .bike__container {
+    grid-template-rows: 42px 151px 1fr;
+    grid-template-areas: "line" "text" "pics";
+    padding: 0 18px 40px 18px;
+  }
+}/*# sourceMappingURL=bike__container.css.map */

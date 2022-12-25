@@ -1,0 +1,12 @@
+.header__container {
+  max-width: 1440px;
+  box-sizing: border-box;
+  margin: 0 auto;
+  padding: 0;
+}
+@media screen and (max-width: 768px) {
+  .header__container {
+    display: flex;
+    justify-content: right;
+  }
+}/*# sourceMappingURL=header__container.css.map */

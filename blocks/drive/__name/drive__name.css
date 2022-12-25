@@ -1,0 +1,28 @@
+.drive__name {
+  line-height: 32px;
+  font-size: 20px;
+  font-weight: 500;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  box-sizing: border-box;
+  margin: 259px 0 0 0;
+  padding: 0;
+}
+@media screen and (max-width: 1167px) {
+  .drive__name {
+    margin-top: 215px;
+  }
+}
+@media screen and (max-width: 889px) {
+  .drive__name {
+    margin-top: 171px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .drive__name {
+    line-height: 22px;
+    font-size: 14px;
+    margin-top: 37px;
+  }
+}/*# sourceMappingURL=drive__name.css.map */

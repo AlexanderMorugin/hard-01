@@ -1,0 +1,29 @@
+.bike__title {
+  line-height: 60px;
+  font-size: 55px;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+  margin: 0;
+  padding: 0;
+}
+@media screen and (max-width: 768px) {
+  .bike__title {
+    line-height: 40px;
+    font-size: 32px;
+  }
+}
+
+.bike__title {
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  margin: 0;
+  padding: 0;
+}
+@media screen and (max-width: 768px) {
+  .bike__title {
+    line-height: 40px;
+    font-size: 32px;
+    margin-top: 40px;
+  }
+}/*# sourceMappingURL=bike__title.css.map */
