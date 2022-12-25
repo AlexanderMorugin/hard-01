@@ -1,0 +1,8 @@
+.bike__name_topstone_theme_dark {
+  color: #fff;
+}
+@media screen and (max-width: 1280px) {
+  .bike__name_topstone_theme_dark {
+    color: #151515;
+  }
+}/*# sourceMappingURL=bike__name_topstone_theme_dark.css.map */

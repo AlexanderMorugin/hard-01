@@ -1,0 +1,13 @@
+.road__map-curve {
+  width: 50px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+@media screen and (max-width: 768px) {
+  .road__map-curve {
+    width: 35px;
+  }
+}/*# sourceMappingURL=road__map-curve.css.map */

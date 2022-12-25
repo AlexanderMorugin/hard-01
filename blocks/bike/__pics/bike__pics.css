@@ -1,0 +1,24 @@
+.bike__pics {
+  grid-area: pics;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 120px 0 44px 0;
+  list-style: none;
+}
+@media screen and (max-width: 1280px) {
+  .bike__pics {
+    gap: 12px;
+    padding: 60px 0 0 0;
+  }
+}
+@media screen and (max-width: 768px) {
+  .bike__pics {
+    padding: 20px 0;
+    gap: 0;
+    justify-content: space-around;
+  }
+}/*# sourceMappingURL=bike__pics.css.map */

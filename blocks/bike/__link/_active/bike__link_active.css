@@ -1,0 +1,8 @@
+.bike__link_active {
+  font-weight: 600;
+  color: #151515;
+  opacity: 1;
+}
+.bike__link_active:hover {
+  opacity: 0.75;
+}/*# sourceMappingURL=bike__link_active.css.map */

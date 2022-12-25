@@ -1,0 +1,13 @@
+@import "../../../components/color/color"
+@import "../../../components/font/font"
+  
+.training__title
+  grid-area: title
+  @extend %font-title
+  color: $color-for-light-one
+  max-width: 460px
+  margin: 0
+  padding: 0    
+  @media screen and (max-width: 768px)
+    max-width: 768px
+    margin-top: 40px

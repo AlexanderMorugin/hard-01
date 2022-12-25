@@ -1,0 +1,13 @@
+.road__slider-control_type_left {
+  background-color: #EBEBEB;
+  background-image: url("../../images/slider-left.svg");
+  background-repeat: no-repeat;
+  background-size: 12px;
+  background-position: left 16px center;
+}
+@media screen and (max-width: 768px) {
+  .road__slider-control_type_left {
+    background-size: 7px;
+    background-position: left 8px center;
+  }
+}/*# sourceMappingURL=road__slider-control_type_left.css.map */

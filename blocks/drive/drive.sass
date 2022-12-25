@@ -1,0 +1,19 @@
+@import "../../components/color/color"
+  
+.drive
+  display: grid
+  grid-template-columns: 55% 45%
+  grid-template-areas: "image text"
+  width: 100%
+  max-width: 1440px
+  color: $color-for-light-one
+  box-sizing: border-box
+  margin: 0 auto
+  padding: 0  
+  padding: 120px 120px 60px 120px
+  @media screen and (max-width: 1439px)
+    padding: 120px 40px 60px 40px
+  @media screen and (max-width: 768px)
+    grid-template-columns: 1fr
+    grid-template-areas: "line" "image" "text"
+    padding: 0 18px 40px 18px

@@ -1,0 +1,11 @@
+.footer__logo {
+  display: none;
+}
+@media screen and (max-width: 768px) {
+  .footer__logo {
+    display: block;
+    width: 38px;
+    height: 38px;
+    transform: translateX(2px) translateY(9px);
+  }
+}/*# sourceMappingURL=footer__logo.css.map */

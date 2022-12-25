@@ -1,0 +1,15 @@
+.bike__indicators {
+  display: none;
+}
+@media screen and (max-width: 768px) {
+  .bike__indicators {
+    list-style: none;
+    display: flex;
+    gap: 5px;
+    justify-content: center;
+    width: 100%;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+}/*# sourceMappingURL=bike__indicators.css.map */

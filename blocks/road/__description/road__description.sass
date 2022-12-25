@@ -1,0 +1,15 @@
+@import "../../../components/color/color"
+@import "../../../components/font/font"
+  
+.road__description
+  grid-area: description
+  @extend %font-subtitle
+  color: $color-for-light-two
+  margin: 0
+  padding: 50px 0 80px 0
+  width: 100%
+  max-width: 460px      
+  @media screen and (max-width: 768px)
+    max-width: 768px
+    margin-top: 120px
+    padding: 0

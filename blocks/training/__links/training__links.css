@@ -1,0 +1,17 @@
+.training__links {
+  grid-area: links;
+  display: flex;
+  gap: 30px;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+@media screen and (max-width: 768px) {
+  .training__links {
+    margin-top: 210px;
+  }
+}/*# sourceMappingURL=training__links.css.map */

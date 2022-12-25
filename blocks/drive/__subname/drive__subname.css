@@ -1,0 +1,19 @@
+.drive__subname {
+  line-height: 28px;
+  font-size: 16px;
+  font-weight: 400;
+  color: #222;
+  opacity: 0.7;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  margin: 6px 0 0 0;
+  padding: 0;
+}
+@media screen and (max-width: 768px) {
+  .drive__subname {
+    line-height: 16px;
+    font-size: 10px;
+    margin-top: 4px;
+  }
+}/*# sourceMappingURL=drive__subname.css.map */

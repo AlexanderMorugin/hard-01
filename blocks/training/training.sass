@@ -1,0 +1,18 @@
+.training
+  display: grid
+  grid-template-columns: 50% 50%
+  grid-template-rows: 60px 1fr 34px
+  grid-template-areas: "title image" "subtitle image" "links image"
+  width: 100%
+  max-width: 1440px
+  column-gap: 20px
+  box-sizing: border-box
+  margin: 0 auto
+  padding: 143px 120px 120px 120px  
+  @media screen and (max-width: 1439px)
+    padding: 120px 40px 60px 40px  
+  @media screen and (max-width: 768px)
+    grid-template-columns: 1fr
+    grid-template-rows: 40px 40px 175px 90px
+    grid-template-areas: "line" "title" "image" "subtitle" "links"
+    padding: 0 18px 60px 18px

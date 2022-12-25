@@ -1,0 +1,14 @@
+.bike__link {
+  line-height: 34px;
+  font-size: 18px;
+  font-weight: 400;
+  text-decoration: none;
+  color: #222;
+  margin: 0;
+  padding: 0;
+  cursor: pointer;
+  opacity: 0.7;
+}
+.bike__link:hover {
+  opacity: 0.6;
+}/*# sourceMappingURL=bike__link.css.map */

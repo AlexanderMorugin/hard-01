@@ -1,0 +1,8 @@
+.bike__desktop_view {
+  display: flex;
+}
+@media screen and (max-width: 768px) {
+  .bike__desktop_view {
+    display: none;
+  }
+}/*# sourceMappingURL=bike__desktop_view.css.map */

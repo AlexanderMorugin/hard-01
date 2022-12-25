@@ -1,0 +1,22 @@
+.toggle__switch
+  display: inline-block
+  background: #fff
+  border-radius: 9999px
+  width: 44px
+  height: 24px
+  position: relative
+  vertical-align: middle
+  transition: background 0.25s      
+  &:before, .toggle__switch:after
+    content: ""
+  &:before
+    display: block
+    background: #24B47E
+    border-radius: 50%
+    box-shadow: 0 0 0 0px #fff
+    width: 20px
+    height: 20px
+    position: absolute
+    top: 2px
+    left: 2px
+    transition: left 0.25s

@@ -1,0 +1,30 @@
+.lead__title {
+  line-height: 60px;
+  font-size: 55px;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+  margin: 0;
+  padding: 0;
+}
+@media screen and (max-width: 768px) {
+  .lead__title {
+    line-height: 40px;
+    font-size: 32px;
+  }
+}
+
+.lead__title {
+  grid-area: title;
+  display: flex;
+  align-items: flex-end;
+  width: 100%;
+  max-width: 460px;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+@media screen and (max-width: 768px) {
+  .lead__title {
+    max-width: 768px;
+  }
+}/*# sourceMappingURL=lead__title.css.map */

@@ -1,0 +1,9 @@
+.page {
+  background-color: #F4F4F4;
+  width: 100%;
+  min-width: 320px;
+  font-family: "Inter", Arial, Helvetica, sans-serif;
+}
+.page_theme_dark {
+  background-color: #333;
+}/*# sourceMappingURL=page.css.map */
