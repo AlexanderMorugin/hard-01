@@ -4,7 +4,7 @@
   justify-content: center;
   width: 136px;
   height: 28px;
-  background: url("../../images/footer-icon-sun.svg"), url("../../images/footer-icon-moon.svg");
+  background: url("/images/footer-icon-sun.svg"), url("../../../images/footer-icon-moon.svg");
   background-repeat: no-repeat;
   background-position: left center, right center;
   background-size: 28px, 20px;

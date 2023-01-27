@@ -1,0 +1,31 @@
+.footer__email-input {
+  outline: none;
+  width: 100%;
+  max-width: 280px;
+  border: none;
+  border-radius: 4px;
+  line-height: 28px;
+  font-size: 13px;
+  font-weight: 500;
+  color: #151515;
+  opacity: 0.7;
+  background: transparent;
+  margin: 0;
+  padding: 10px 0 10px 20px;
+}
+.footer__email-input:hover {
+  opacity: 1;
+  cursor: pointer;
+}
+.footer__email-input:focus::-webkit-input-placeholder {
+  color: transparent;
+}
+.footer__email-input:focus::-moz-placeholder {
+  color: transparent;
+}
+.footer__email-input:focus:-moz-placeholder {
+  color: transparent;
+}
+.footer__email-input:focus:-ms-input-placeholder {
+  color: transparent;
+}/*# sourceMappingURL=footer__email-input.css.map */
