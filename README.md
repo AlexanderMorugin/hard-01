@@ -26,7 +26,7 @@
 
 ## Смотреть проект ##
 
-Ссылка на проект в gh-pages: **[Путешествия по России](https://alexandermorugin.github.io/hard-01/)**
+Ссылка на проект в gh-pages: **[Велосипеды](https://alexandermorugin.github.io/hard-01/)**
 
 --------
 студент "Яндекс Практикум"\
