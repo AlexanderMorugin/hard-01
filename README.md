@@ -2,7 +2,7 @@
 
 Учебный проект лендинга, курса Веб-разработчик Яндекс.Практикум.
 
-![Travel Demo](/russian-travel-readme-min.png)
+![Bicycles Demo](/bicycles-readme-min.png)
 
 ## О проекте ##
 
